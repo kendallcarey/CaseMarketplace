@@ -1,4 +1,4 @@
-json.array!(@cases) do |case|
-  json.extract! case, :id
-  json.url case_url(case, format: :json)
+json.array!(@cases) do |kase|
+  json.extract! kase, :id, :type, :description, :value, :loan_amount
+  json.url case_url(kase, format: :json)
 end

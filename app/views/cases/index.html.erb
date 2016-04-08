@@ -3,16 +3,24 @@
 <table>
   <thead>
     <tr>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Value</th>
+      <th>Loan Amount</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @cases.each do |case| %>
+    <% @cases.each do |kase| %>
       <tr>
-        <td><%= link_to 'Show', case %></td>
-        <td><%= link_to 'Edit', edit_case_path(case) %></td>
-        <td><%= link_to 'Destroy', case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= kase.type %></td>
+        <td><%= kase.description %></td>
+        <td><%= kase.value %></td>
+        <td><%= kase.loan_amount %></td>
+        <td><%= link_to 'Show', kase %></td>
+        <td><%= link_to 'Edit', edit_case_path(kase) %></td>
+        <td><%= link_to 'Destroy', kase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
