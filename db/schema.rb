@@ -13,7 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20160408033850) do
 
-  create_table "cases", force: true do |t|
+  create_table "kases", force: true do |t|
+    t.string   "type"
+    t.text     "description"
+    t.integer  "value"
+    t.integer  "loan_amount"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
